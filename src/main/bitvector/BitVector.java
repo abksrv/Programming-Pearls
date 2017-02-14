@@ -8,6 +8,13 @@ public class BitVector {
 	long[] bits = new long[0];
 	long size = 0;
 
+	public BitVector() {
+	}
+	
+	public BitVector(long size) {
+		bits = new long[findIndexOfLong(size - 1)];
+	}
+	
 	public void set(long i) {
 		int index = findIndexOfLong(i);
 		resizeIfRequired(index);
